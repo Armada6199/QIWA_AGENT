@@ -1,0 +1,316 @@
+#WACContainer,
+:root {
+  --WatsonAssistantChat-BASE-weight-semibold: 600;
+  --WatsonAssistantChat-BASE-font-size-extra-small: 9px;
+  --WatsonAssistantChat-BASE-font-size-small: 12px;
+  --WatsonAssistantChat-BASE-font-size-med: 14px;
+  --WatsonAssistantChat-BASE-font-size-large: 16px;
+  --WatsonAssistantChat-BASE-font-size-xlarge: 20px;
+  --WatsonAssistantChat-BASE-font-size-xxlarge: 28px;
+  --WatsonAssistantChat-BASE-line-height-extra-small: 14px;
+  --WatsonAssistantChat-BASE-line-height-small: 16px;
+  --WatsonAssistantChat-BASE-line-height-med: 18px;
+  --WatsonAssistantChat-BASE-line-height-large: 20px;
+  --WatsonAssistantChat-BASE-line-height-xlarge: 26px;
+  --WatsonAssistantChat-BASE-line-height-xxlarge: 36px;
+  --WatsonAssistantChat-BASE-border-radius-xsmall: 2px;
+  --WatsonAssistantChat-BASE-border-radius-small: 4px;
+  --WatsonAssistantChat-BASE-border-radius-med: 8px;
+  --WatsonAssistantChat-BASE-border-radius-large: 12px;
+  --WatsonAssistantChat-BASE-border-radius-xlarge: 16px;
+  --WatsonAssistantChat-BASE-border-width-small: 1px;
+  --WatsonAssistantChat-BASE-border-width-med: 2px;
+  --WatsonAssistantChat-BASE-border-width-large: 3px;
+  --WatsonAssistantChat-BASE-max-height: 640px;
+  --WatsonAssistantChat-BASE-min-height: max(
+    150px,
+    calc(min(256px, 100vh) - var(--WatsonAssistantChat-BASE-bottom-position))
+  );
+  --WatsonAssistantChat-BASE-max-width: calc(
+    100vw - var(--WatsonAssistantChat-BASE-right-position)
+  );
+  --WatsonAssistantChat-BASE-box-shadow: 1px 0 4px hsla(0, 0%, 9%, 0.3);
+  --WatsonAssistantChat-BASE-bottom-position: 185px;
+  --WatsonAssistantChat-BASE-right-position: 32px;
+  --WatsonAssistantChat-BASE-top-position: auto;
+  --WatsonAssistantChat-BASE-left-position: auto;
+  --WatsonAssistantChat-CARD-box-shadow: 0 2px 4px 0
+    var(--WatsonAssistantChat-CARBON-skeleton-01);
+  --WatsonAssistantChat-CARD-background: var(
+    --WatsonAssistantChat-CARBON-ui-01
+  );
+  --WatsonAssistantChat-CARD-border-radius: var(
+    --WatsonAssistantChat-BASE-border-radius-med
+  );
+  --WatsonAssistantChat-LAUNCHER-position-bottom: 50px !important;
+  --WatsonAssistantChat-LAUNCHER-position-right: 32px;
+  --WatsonAssistantChat-LAUNCHER-default-size: 56px;
+  --WatsonAssistantChat-MESSAGE-bar-width: 3px;
+  --WatsonAssistantChat-AGENT-end-chat-container-height: 44px;
+  --WatsonAssistantChat-BASE-z-index: 99999;
+  --WatsonAssistantChat-BASE-max-input-height: 200px;
+  --WatsonAssistantChat-BASE-width: min(
+    60vw,
+    var(--WatsonAssistantChat-BASE-max-width)
+  );
+  --WatsonAssistantChat-BASE-height: calc(100vh - 64px);
+  --WatsonAssistantChat-UNREAD-INDICATOR-color-background: #da1e28;
+  --WatsonAssistantChat-UNREAD-INDICATOR-color-text: #fff;
+  --WatsonAssistantChat-BASE-font-family: "IBM Plex Sans", "Helvetica Neue",
+    Arial, sans-serif;
+  --WatsonAssistantChat-BASE-header-font-family: "IBM Plex Sans",
+    "Helvetica Neue", Arial, sans-serif;
+  --WatsonAssistantChat-HOME_SCREEN-greeting-font-family: "IBM Plex Sans",
+    "Helvetica Neue", Arial, sans-serif;
+  --WatsonAssistantChat-PRIMARY-color: var(--WatsonAssistantChat-CARBON-ui-01);
+  --WatsonAssistantChat-PRIMARY-color-text: var(
+    --WatsonAssistantChat-CARBON-text-01
+  );
+  --WatsonAssistantChat-PRIMARY-color-hover: var(
+    --WatsonAssistantChat-CARBON-hover-ui
+  );
+  --WatsonAssistantChat-PRIMARY-color-active: var(
+    --WatsonAssistantChat-CARBON-active-ui
+  );
+  --WatsonAssistantChat-PRIMARY-color-focus: var(
+    --WatsonAssistantChat-CARBON-focus
+  );
+  --WatsonAssistantChat-SECONDARY-color: var(
+    --WatsonAssistantChat-CARBON-inverse-02
+  );
+  --WatsonAssistantChat-SECONDARY-color-text: var(
+    --WatsonAssistantChat-CARBON-inverse-01
+  );
+  --WatsonAssistantChat-ACCENT-color: var(
+    --WatsonAssistantChat-CARBON-interactive-01
+  );
+  --WatsonAssistantChat-ACCENT-color-ghost-text: var(
+    --WatsonAssistantChat-CARBON-link-01
+  );
+  --WatsonAssistantChat-ACCENT-color-text: var(
+    --WatsonAssistantChat-CARBON-text-04
+  );
+  --WatsonAssistantChat-ACCENT-color-bw: #fff;
+  --WatsonAssistantChat-ACCENT-color-bw-hover: #e0e0e0;
+  --WatsonAssistantChat-ACCENT-color-bw-active: #c6c6c6;
+  --WatsonAssistantChat-ACCENT-color-bw-inverse: #161616;
+  --WatsonAssistantChat-ACCENT-color-bw-gray: #f4f4f4;
+  --WatsonAssistantChat-ACCENT-color-pastel: #0144c1;
+  --WatsonAssistantChat-HOME_SCREEN-color-text: var(
+    --WatsonAssistantChat-ACCENT-color-text
+  );
+  --WatsonAssistantChat-HOME_SCREEN-background: var(
+    --WatsonAssistantChat-CARBON-interactive-01
+  );
+  --WatsonAssistantChat-HOME_SCREEN-color-hover: var(
+    --WatsonAssistantChat-CARBON-hover-primary
+  );
+  --WatsonAssistantChat-HOME_SCREEN-color-focus: #fff;
+  --WatsonAssistantChat-HOME_SCREEN-color-active: var(
+    --WatsonAssistantChat-CARBON-active-primary
+  );
+  --WatsonAssistantChat-DISCLAIMER-color-text: #fff;
+  --WatsonAssistantChat-DISCLAIMER-background: #393939;
+  --WatsonAssistantChat-DISCLAIMER-background-button: #6f6f6f;
+  --WatsonAssistantChat-DISCLAIMER-color-hover: #4c4c4c;
+  --WatsonAssistantChat-DISCLAIMER-color-focus: #fff;
+  --WatsonAssistantChat-DISCLAIMER-color-active: #4c4c4c;
+  --WatsonAssistantChat-LAUNCHER-color-background: var(
+    --WatsonAssistantChat-ACCENT-color
+  );
+  --WatsonAssistantChat-LAUNCHER-color-avatar: var(
+    --WatsonAssistantChat-ACCENT-color-text
+  );
+  --WatsonAssistantChat-LAUNCHER-color-background-hover: var(
+    --WatsonAssistantChat-CARBON-hover-primary
+  );
+  --WatsonAssistantChat-LAUNCHER-color-background-active: var(
+    --WatsonAssistantChat-CARBON-active-primary
+  );
+  --WatsonAssistantChat-LAUNCHER-color-focus-border: var(
+    --WatsonAssistantChat-ACCENT-color-text
+  );
+  --WatsonAssistantChat-LAUNCHER-EXPANDED-MESSAGE-color-background: var(
+    --WatsonAssistantChat-ACCENT-color
+  );
+  --WatsonAssistantChat-LAUNCHER-EXPANDED-MESSAGE-color-text: var(
+    --WatsonAssistantChat-ACCENT-color-text
+  );
+  --WatsonAssistantChat-LAUNCHER-EXPANDED-MESSAGE-color-background-hover: var(
+    --WatsonAssistantChat-CARBON-hover-primary
+  );
+  --WatsonAssistantChat-LAUNCHER-EXPANDED-MESSAGE-color-background-active: var(
+    --WatsonAssistantChat-CARBON-active-primary
+  );
+  --WatsonAssistantChat-LAUNCHER-EXPANDED-MESSAGE-color-focus-border: var(
+    --WatsonAssistantChat-ACCENT-color-text
+  );
+  --WatsonAssistantChat-BRANDING-color-text-01: #161616;
+  --WatsonAssistantChat-BRANDING-color-text-02: #525252;
+  --WatsonAssistantChat-BRANDING-background: #fff;
+  --WatsonAssistantChat-BRANDING-link: #0f62fe;
+  --WatsonAssistantChat-BRANDING-border-color: #e0e0e0;
+  --WatsonAssistantChat-BRANDING-font-family: "IBM Plex Sans", "Helvetica Neue",
+    Arial, sans-serif;
+  --WatsonAssistantChat-CARBON-interactive-01: #0f62fe;
+  --WatsonAssistantChat-CARBON-interactive-02: #393939;
+  --WatsonAssistantChat-CARBON-interactive-03: #0f62fe;
+  --WatsonAssistantChat-CARBON-interactive-04: #0f62fe;
+  --WatsonAssistantChat-CARBON-ui-background: #f4f4f4;
+  --WatsonAssistantChat-CARBON-ui-01: #fff;
+  --WatsonAssistantChat-CARBON-ui-02: #f4f4f4;
+  --WatsonAssistantChat-CARBON-ui-03: #e0e0e0;
+  --WatsonAssistantChat-CARBON-ui-04: #8d8d8d;
+  --WatsonAssistantChat-CARBON-ui-05: #161616;
+  --WatsonAssistantChat-CARBON-text-01: #161616;
+  --WatsonAssistantChat-CARBON-text-02: #525252;
+  --WatsonAssistantChat-CARBON-text-03: #a8a8a8;
+  --WatsonAssistantChat-CARBON-text-04: #fff;
+  --WatsonAssistantChat-CARBON-text-05: #6f6f6f;
+  --WatsonAssistantChat-CARBON-icon-01: #161616;
+  --WatsonAssistantChat-CARBON-icon-02: #525252;
+  --WatsonAssistantChat-CARBON-icon-03: #fff;
+  --WatsonAssistantChat-CARBON-link-01: #0f62fe;
+  --WatsonAssistantChat-CARBON-inverse-link: #78a9ff;
+  --WatsonAssistantChat-CARBON-field-01: #fff;
+  --WatsonAssistantChat-CARBON-field-02: #f4f4f4;
+  --WatsonAssistantChat-CARBON-inverse-01: #fff;
+  --WatsonAssistantChat-CARBON-inverse-02: #393939;
+  --WatsonAssistantChat-CARBON-support-01: #da1e28;
+  --WatsonAssistantChat-CARBON-support-02: #198038;
+  --WatsonAssistantChat-CARBON-support-03: #f1c21b;
+  --WatsonAssistantChat-CARBON-support-04: #0043ce;
+  --WatsonAssistantChat-CARBON-inverse-support-01: #fa4d56;
+  --WatsonAssistantChat-CARBON-inverse-support-02: #42be65;
+  --WatsonAssistantChat-CARBON-inverse-support-03: #f1c21b;
+  --WatsonAssistantChat-CARBON-inverse-support-04: #4589ff;
+  --WatsonAssistantChat-CARBON-overlay-01: hsla(0, 0%, 9%, 0.5);
+  --WatsonAssistantChat-CARBON-danger: #da1e28;
+  --WatsonAssistantChat-CARBON-focus: #0f62fe;
+  --WatsonAssistantChat-CARBON-inverse-focus-ui: #fff;
+  --WatsonAssistantChat-CARBON-hover-primary: #0353e9;
+  --WatsonAssistantChat-CARBON-active-primary: #002d9c;
+  --WatsonAssistantChat-CARBON-hover-primary-text: #0043ce;
+  --WatsonAssistantChat-CARBON-hover-secondary: #4c4c4c;
+  --WatsonAssistantChat-CARBON-active-secondary: #6f6f6f;
+  --WatsonAssistantChat-CARBON-hover-tertiary: #0353e9;
+  --WatsonAssistantChat-CARBON-active-tertiary: #002d9c;
+  --WatsonAssistantChat-CARBON-hover-ui: #e5e5e5;
+  --WatsonAssistantChat-CARBON-active-ui: #c6c6c6;
+  --WatsonAssistantChat-CARBON-selected-ui: #e0e0e0;
+  --WatsonAssistantChat-CARBON-inverse-hover-ui: #4c4c4c;
+  --WatsonAssistantChat-CARBON-hover-selected-ui: #cacaca;
+  --WatsonAssistantChat-CARBON-hover-danger: #b81921;
+  --WatsonAssistantChat-CARBON-active-danger: #750e13;
+  --WatsonAssistantChat-CARBON-hover-row: #e5e5e5;
+  --WatsonAssistantChat-CARBON-visited-link: #8a3ffc;
+  --WatsonAssistantChat-CARBON-disabled-01: #fff;
+  --WatsonAssistantChat-CARBON-disabled-02: #c6c6c6;
+  --WatsonAssistantChat-CARBON-disabled-03: #8d8d8d;
+  --WatsonAssistantChat-CARBON-highlight: #d0e2ff;
+  --WatsonAssistantChat-CARBON-skeleton-01: #e5e5e5;
+  --WatsonAssistantChat-CARBON-skeleton-02: #c6c6c6;
+  --WatsonAssistantChat-CARBON-brand-01: #0f62fe;
+  --WatsonAssistantChat-CARBON-brand-02: #393939;
+  --WatsonAssistantChat-CARBON-brand-03: #0f62fe;
+  --WatsonAssistantChat-CARBON-active-01: #c6c6c6;
+  --WatsonAssistantChat-CARBON-hover-field: #e5e5e5;
+  --WatsonAssistantChat-CARBON-text-support-01: #fff;
+  --WatsonAssistantChat-CARBON-text-support-02: #fff;
+  --WatsonAssistantChat-CARBON-text-support-03: #161616;
+  --WatsonAssistantChat-CARBON-text-support-04: #fff;
+  --WatsonAssistantChat-CARBON-easing-standard-productive: cubic-bezier(
+    0.2,
+    0,
+    0.38,
+    0.9
+  );
+  --WatsonAssistantChat-CARBON-easing-standard-expressive: cubic-bezier(
+    0.4,
+    0.14,
+    0.3,
+    1
+  );
+  --WatsonAssistantChat-CARBON-easing-entrance-productive: cubic-bezier(
+    0,
+    0,
+    0.38,
+    0.9
+  );
+  --WatsonAssistantChat-CARBON-easing-entrance-expressive: cubic-bezier(
+    0,
+    0,
+    0.3,
+    1
+  );
+  --WatsonAssistantChat-CARBON-easing-exit-productive: cubic-bezier(
+    0.2,
+    0,
+    1,
+    0.9
+  );
+  --WatsonAssistantChat-CARBON-easing-exit-expressive: cubic-bezier(
+    0.4,
+    0.14,
+    1,
+    1
+  );
+  --WatsonAssistantChat-CARBON-duration--fast-01: 70ms;
+  --WatsonAssistantChat-CARBON-duration--fast-02: 110ms;
+  --WatsonAssistantChat-CARBON-duration--moderate-01: 150ms;
+  --WatsonAssistantChat-CARBON-duration--moderate-02: 240ms;
+  --WatsonAssistantChat-CARBON-duration--slow-01: 400ms;
+  --WatsonAssistantChat-CARBON-duration--slow-02: 700ms;
+  --WatsonAssistantChat-INPUT-border-radius: var(
+    --WatsonAssistantChat-BASE-border-radius-xlarge
+  );
+}
+#WACContainer .WACContainer {
+  direction: rtl !important ;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 15px auto;
+  position: relative;
+  color: #ccc;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  backdrop-filter: blur(10px);
+}
+.loader::after,
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.5) translate(0, 0);
+  background-color: #ccc;
+  border-radius: 50%;
+  animation: animloader 1s infinite ease-in-out;
+}
+.loader::before {
+  background-color: #000;
+  transform: scale(0.5) translate(-48px, -48px);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes animloader {
+  50% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+/* END Loader style */

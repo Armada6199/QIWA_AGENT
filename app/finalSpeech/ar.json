@@ -1,0 +1,8 @@
+{
+  "dialog": {
+    "header": "اخبرنا المزيد عن استفسارك",
+    "textArea_placeholder": "ادخل شرح عن استفسارك",
+    "send_button": "ارسال",
+    "cancel_button": "ألغاء"
+  }
+}
