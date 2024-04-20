@@ -1,6 +1,6 @@
 "use client";
 import { WebChatContainer } from "@ibm-watson/assistant-web-chat-react";
-import AssistantIcon from "@mui/icons-material/Assistant";
+import HelpIcon from "@mui/icons-material/Help";
 import MicIcon from "@mui/icons-material/Mic";
 import {
   Button,
@@ -18,7 +18,6 @@ import { useEffect, useRef, useState } from "react";
 import "../../styles/chatbot.css";
 import "../../styles/recording.css";
 import arContent from "./ar.json";
-import HelpIcon from "@mui/icons-material/Help";
 function customResponseHandler(event) {
   const { message, element, fullMessage } = event.data;
   console.log(message);
@@ -198,7 +197,7 @@ function page() {
   return (
     <Grid container>
       {isLoading.status && isOpen && (
-        <Box position={"absolute"} bottom={150} right={100} zIndex={999999}>
+        <Box position={"absolute"} bottom={150} left={100} zIndex={999999}>
           <span class="loader"></span>
           <Typography variant="body2">{isLoading.message}</Typography>
         </Box>
@@ -207,7 +206,7 @@ function page() {
         <Box
           position={"absolute"}
           bottom={30}
-          right={40}
+          left={40}
           sx={{ cursor: "pointer" }}
           onClick={() =>
             !permission
@@ -229,7 +228,7 @@ function page() {
         <Box
           position={"absolute"}
           bottom={30}
-          right={80}
+          left={80}
           sx={{ cursor: "pointer" }}
           onClick={handleOpenClassification}
           zIndex={999999}

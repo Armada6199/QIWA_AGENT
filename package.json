@@ -2,6 +2,7 @@
   "name": "fayde",
   "version": "0.1.0",
   "private": true,
+  "proxy:": "https://9418-178-20-188-157.ngrok-free.app/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

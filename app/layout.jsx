@@ -4,7 +4,7 @@ import Providers from "./components/Providers";
 import Header from "./components/layout/Header";
 function layout({ children }) {
   return (
-    <html>
+    <html dir="rtl">
       <head></head>
       <body>
         <Providers>

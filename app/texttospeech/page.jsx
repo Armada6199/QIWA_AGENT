@@ -10,7 +10,7 @@ import {
   MaxWidthContainer,
   SectionHeader,
 } from "../components/HeroText";
-import { handleExtractChatbotText } from "../finalSign/page";
+// import { handleExtractChatbotText } from "../finalSign/page";
 const webChatOptions = {
   integrationID: process.env.NEXT_PUBLIC_INTEGRATION_ID, // The ID of this integration.
   region: process.env.NEXT_PUBLIC_REGION, // The region your integration is hosted in.
@@ -29,7 +29,7 @@ function page() {
       handler: async (e) => {
         const response = await axios.post(
           `${process.env.NEXT_PUBLIC_BACKEND_API}/api/text-to-speech`,
-          `${handleExtractChatbotText(e)}`,
+          // `${handleExtractChatbotText(e)}`,
           { headers: headers, responseType: "blob" }
         );
         const sourceData = URL.createObjectURL(response.data);
