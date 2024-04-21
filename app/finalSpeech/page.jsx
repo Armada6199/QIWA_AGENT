@@ -197,6 +197,7 @@ function page() {
   }
   const handleOpenDocumentDrop = () => setIsOpenDocumentsModal(true);
   const handleCloseDocumentsModal = () => setIsOpenDocumentsModal(false);
+
   const handleFileUpload = async (event) => {
     const headers = {
       "Content-Type": "application/json",
@@ -217,6 +218,7 @@ function page() {
       });
     };
     const base64 = await convertBase64(file);
+
     // console.log(base64.split(",")[1]);
     setBase64File(base64);
     setIsLoading({ status: true });
@@ -241,6 +243,7 @@ function page() {
     const updateLocale = async () => await instance?.updateLocale("ar");
     updateLocale();
   }, [instance]);
+
   return (
     <Grid container>
       {isLoading.status && isOpen && (
@@ -368,7 +371,6 @@ function page() {
               <Typography variant="h6">قم برفع هويتك الشخصية</Typography>
             </Grid>
           </Grid>
-
           <Grid item md={12}>
             <Paper
               variant="outlined"

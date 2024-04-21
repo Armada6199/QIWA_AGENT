@@ -54,6 +54,19 @@ const Hero = () => {
   const [activeFeature, setActiveFeature] = useState("");
   useEffect(() => {
     instance?.on({
+      type: "customResponse",
+      handler: (event, instance) => {
+        console.log("handled");
+        if (
+          event.data.message.user_defined &&
+          event.data.message.user_defined.user_defined_type ===
+            "user-file-upload"
+        ) {
+          fileUploadCustomResponseHandler(event, instance);
+        }
+      },
+    });
+    instance?.on({
       type: "receive",
       handler: (e) => {
         console.log(e.data.output.generic[0].text);
@@ -61,6 +74,34 @@ const Hero = () => {
     });
     instance?.updateCSSVariables();
   }, [instance]);
+  function fileUploadCustomResponseHandler(event, instance) {
+    const { element } = event.data;
+    element.innerHTML = `
+          <div>
+              <input type="file" id="uploadInput" style="display: none;">
+              <button id="uploadButton" class="WAC__button--primary WAC__button--primaryMd" style="margin-top: 10px;cursor:pointer; color:#fff;border-radius:10px;padding:10px;background-color:#0C2643"> Upload a File </button>
+          </div>`;
+
+    const uploadInput = element.querySelector("#uploadInput");
+    const button = element.querySelector("#uploadButton");
+    button.addEventListener("click", () => {
+      uploadInput.click();
+    });
+    uploadInput.addEventListener("change", (event) => {
+      const selectedFile = event.target.files[0];
+      if (selectedFile) {
+        // You can access the selected file using selectedFile variable
+        // console.log("Selected file:", selectedFile.name);
+        // uploadFileFromAsst(selectedFile);
+        console.log(selectedFile);
+        var send_obj = { input: { message_type: "text", text: "" } };
+
+        instance.send(send_obj, { silent: true }).catch(function (error) {
+          console.error("Sending message to chatbot failed");
+        });
+      }
+    });
+  }
   return (
     <Grid container item height={"calc(100vh - 60px)"} p={4} gap={4}>
       <HeroSection>
